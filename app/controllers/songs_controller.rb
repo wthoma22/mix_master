@@ -1,5 +1,4 @@
 class SongsController < ApplicationController
-
   def new
     @artist = Artist.find(params[:artist_id])
     @song = @artist.songs.new
@@ -18,8 +17,7 @@ class SongsController < ApplicationController
 
 private
 
-    def song_params
-      params.require(:song).permit(:title)
-    end
-
+  def song_params
+    params.require(:song).permit(:title)
+  end
 end
